@@ -17,4 +17,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/omni_star.mk
+     $(LOCAL_DIR)/twrp_star.mk

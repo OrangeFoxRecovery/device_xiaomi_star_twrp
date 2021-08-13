@@ -74,6 +74,8 @@ BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_SIZE := product vendor system_ext system 
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_NO_RECOVERY := true
+BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4

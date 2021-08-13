@@ -29,6 +29,6 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 PRODUCT_DEVICE := star
 PRODUCT_NAME := twrp_star
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Xiaomi
+PRODUCT_MODEL := Mi 11
 PRODUCT_MANUFACTURER := xiaomi
-PRODUCT_RELEASE_NAME := Xiaomi Xiaomi
+PRODUCT_RELEASE_NAME := Xiaomi Mi 11

@@ -18,6 +18,15 @@
 
 LOCAL_PATH := device/xiaomi/star
 
+# Dynamic Partitions
+BOARD_USE_DYNAMIC_PARTITIONS := true
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 30
+
+# API
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 # A/B
 AB_OTA_PARTITIONS += \
     boot \

@@ -31,7 +31,9 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 AB_OTA_PARTITIONS += \
     boot \
     system \
-    vendor
+    system_ext \
+    vendor \
+    odm
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -41,17 +43,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service
 
 PRODUCT_PACKAGES += \
-    bootctrl.lahaina
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.lahaina \
-    libgptutils \
-    libz \
-    libcutils
+    bootctrl
 
 PRODUCT_PACKAGES += \
     otapreopt_script \

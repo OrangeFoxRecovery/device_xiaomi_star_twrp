@@ -30,10 +30,15 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
+    dtbo \
+    odm \
+    product \
     system \
     system_ext \
+    vbmeta \
+    vbmeta_system \
     vendor \
-    odm
+    vendor_boot
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \

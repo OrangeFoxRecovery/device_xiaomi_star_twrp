@@ -51,7 +51,20 @@ AB_OTA_UPDATER := true
 TW_INCLUDE_REPACKTOOLS := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := 
+BOARD_KERNEL_CMDLINE := \
+   console=ttyMSM0,115200n8 \
+   androidboot.hardware=qcom \
+   androidboot.console=ttyMSM0 \
+   androidboot.memcg=1 \
+   video=vfb:640x400,bpp=32,memsize=3072000 \
+   service_locator.enable=1 \
+   androidboot.usbcontroller=a600000.dwc3 \
+   swiotlb=0 \
+   loop.max_part=7 \
+   androidboot.bootdevice=1d84000.ufshc \ 
+   androidboot.serialno=7aa4ad93
+   
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 BOARD_BOOTIMG_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)

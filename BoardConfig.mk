@@ -63,12 +63,16 @@ BOARD_KERNEL_CMDLINE := \
    loop.max_part=7 \
    androidboot.bootdevice=1d84000.ufshc \ 
    androidboot.serialno=7aa4ad93
-   
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+
+BOARD_KERNEL_BASE := 0x014b96fc
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 BOARD_BOOTIMG_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_KERNEL_CLANG_COMPILE := true
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := star,mars,venus

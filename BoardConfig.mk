@@ -146,6 +146,11 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
+# Soong Namespace
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    hardware/qcom/bootctrl
+
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true

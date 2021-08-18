@@ -139,6 +139,10 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 2
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 TW_INCLUDE_CRYPTO := true
+BOARD_USES_QCOM_FBE_DECRYPTION := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
+
+TARGET_RECOVERY_DEVICE_MODULES += libion libandroidicu vendor.display.config@1.0 vendor.display.config@2.0 libdisplayconfig.qti vendor.qti.hardware.vibrator.service vendor.qti.hardware.vibrator.impl libqtivibratoreffect
 
 # System as root
 BOARD_ROOT_EXTRA_FOLDERS := bluetooth dsp firmware persist

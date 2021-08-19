@@ -62,7 +62,7 @@ service touchfeature_v2-hal-1-0 /vendor/bin/hw/vendor.xiaomi.hw.touchfeature@1.0
 on boot
     start health-hal-2-1
     start touchfeature_v2-hal-1-0
-    
+    onrestart restart touch 
 on post-fs
     start boot-hal-1-1
     

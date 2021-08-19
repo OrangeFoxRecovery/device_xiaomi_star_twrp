@@ -44,17 +44,25 @@ on boot
     chmod 0664 /dev/xiaomi-touch
     insmod /vendor/lib/modules/xiaomi_touch.ko
     insmod /vendor/lib/modules/fts_touch_spi.ko
-
-    insmod /vendor/lib/modules/q6_pdr_dlkm.ko
+    insmod /vendor/lib/modules/focaltech_touch.ko
     insmod /vendor/lib/modules/q6_notifier_dlkm.ko
-    insmod /vendor/lib/modules/snd_event_dlkm.ko
+    insmod /vendor/lib/modules/fts_touch_spi.ko
     insmod /vendor/lib/modules/apr_dlkm.ko
     insmod /vendor/lib/modules/adsp_loader_dlkm.ko
+
+on init
+service touchfeature_v2-hal-1-0 /vendor/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
+    class hal
+    user root
+    group root
+    disabled
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw
+    recovery u:r:recovery:s0
     
 on boot
     start health-hal-2-1
+    start touchfeature_v2-hal-1-0
     
 on post-fs
     start boot-hal-1-1
-    
     

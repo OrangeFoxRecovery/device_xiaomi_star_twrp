@@ -20,15 +20,15 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-# Inherit from star device
-$(call inherit-product, device/xiaomi/star/device.mk)
+# Inherit from haydn device
+$(call inherit-product, device/xiaomi/haydn/device.mk)
 
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := star
-PRODUCT_NAME := twrp_star
+PRODUCT_DEVICE := haydn
+PRODUCT_NAME := twrp_haydn
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 11
 PRODUCT_MANUFACTURER := xiaomi

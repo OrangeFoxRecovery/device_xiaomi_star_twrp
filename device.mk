@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/xiaomi/star
+LOCAL_PATH := device/xiaomi/haydn
 
 # Dynamic Partitions
 BOARD_USE_DYNAMIC_PARTITIONS := true

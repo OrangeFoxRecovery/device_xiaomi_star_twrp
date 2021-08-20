@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/star
+DEVICE_PATH := device/xiaomi/haydn
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -37,14 +37,14 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := kyro-680
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := star
+TARGET_BOOTLOADER_BOARD_NAME := haydn
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno660
-QCOM_BOARD_PLATFORMS += star
+QCOM_BOARD_PLATFORMS += haydn
 
 # A/B
 AB_OTA_UPDATER := true
@@ -77,11 +77,11 @@ BOARD_KERNEL_IMAGE_NAME := kernel
 # Target Kernel
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_COMPILE_WITH_MSM_KERNEL := true
-TARGET_KERNEL_SOURCE := kernel/xiaomi/star
-TARGET_KERNEL_CONFIG := star_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/haydn
+TARGET_KERNEL_CONFIG := haydn_defconfig
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := star,mars,venus
+TARGET_OTA_ASSERT_DEVICE := haydn,haydnin
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072

@@ -35,16 +35,20 @@ service vendor.qti.vibrator /system/bin/vendor.qti.hardware.vibrator.service
     setenv LD_LIBRARY_PATH /vendor/lib64
     seclabel u:r:recovery:s0
     
+on post-fs
+    start boot-hal-1-1  
+    
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
         
 on early-init
     insmod /vendor/lib/modules/fts_touch_spi.ko
-    
+    insmod /vendor/lib/modules/adsp_loader_dlkm.ko
+    insmod /vendor/lib/modules/q6_pdr_dlkm.ko
+    insmod /vendor/lib/modules/q6_notifier_dlkm.ko
+    insmod /vendor/lib/modules/snd_event_dlkm.ko
+    insmod /vendor/lib/modules/apr_dlkm.ko
+
 on boot
-    start health-hal-2-1
-    
-on post-fs
-    start boot-hal-1-1
-    
+    start health-hal-2-1   
